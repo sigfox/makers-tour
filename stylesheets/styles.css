@@ -57,7 +57,7 @@
 body {
   background-color: #fff;
   padding:50px;
-  font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.5 "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#727272;
   font-weight:400;
 }
@@ -246,6 +246,57 @@ footer {
   position:fixed;
   bottom:50px;
   -webkit-font-smoothing:subpixel-antialiased;
+  text-align: center;
+}
+
+footer ul {
+  list-style:none;
+  height:40px;
+  padding:0;
+  border-radius:5px;
+  width:270px;
+}
+
+footer li {
+  width:89px;
+  float:left;
+  height:40px;
+}
+
+footer li:first-child a {
+  border-radius:5px 0 0 5px;
+}
+
+footer li:last-child a {
+  border-radius:0 5px 5px 0;
+}
+
+footer ul a {
+  line-height:1;
+  font-size:11px;
+  color:#230066;
+  display:block;
+  text-align:center;
+  padding-top:6px;
+  height:34px;
+}
+
+footer ul a:hover {
+  color:#230066;
+}
+
+footer ul a:active {
+}
+
+footer ul li + li + li {
+  border-right:none;
+  width:89px;
+}
+
+footer ul a strong {
+  font-size:14px;
+  display:block;
+  color:#222;
 }
 
 @media print, screen and (max-width: 960px) {
