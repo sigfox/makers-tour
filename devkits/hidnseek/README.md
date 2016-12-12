@@ -52,7 +52,7 @@ This driver should work with any version of Windows XP right through to 8.1 and 
 
 #### Installing the Required libraries
 
-In order to use all of the included sensors (including Sigfox!), you will need to **install the required libraries**. To do this, navigate to the [Library](../devkits/hidnseek/library) folder. Here you will find a .zip file called 'hidnseek.zip'. Install this from your Arduino IDE (*Sketch->Include Library->Add .zip Library*) and include required library with your .ino sketch. If required, you can access the uncompressed versions of the library from here as well.
+In order to use all of the included sensors (including Sigfox!), you will need to **install the required libraries**. To do this, navigate to the [Library](../hidnseek/library) folder. Here you will find a .zip file called 'hidnseek.zip'. Extract the HidnSeek-libs.zip file and install each of the contained libraries into your Arduino IDE (*Sketch->Include Library->Add .zip Library*). Include the required libraries with your .ino sketch. If required, you can access the uncompressed versions of the library from here as well.
 
 #### Flashing the HidnSeek (DFU Mode)
 
