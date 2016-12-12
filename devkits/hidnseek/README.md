@@ -41,8 +41,8 @@ Now that you have added the appropriate URLs to the Arduino IDE preferences, you
 Then, **quit and reopen the Arduino IDE** to ensure that all of the boards are properly installed. You should now be able to select and upload to the new boards listed in the **Tools->Board** menu.
 
 ##### USBasp Drivers for Windows
-* **Windows up to 7.x** : [usbasp-windriver.2011-05-28.zip](usbasp-windriver.2011-05-28.zip)
-* **Windows 8.1 to 10.x** : [USBasp-win-driver-x86-x64-v3.0.7.zip](USBasp-win-driver-x86-x64-v3.0.7.zip)
+* **Windows up to 7.x** : [usbasp-windriver.2011-05-28.zip](https://github.com/hidnseek/hidnseek/blob/master/Drivers/usbasp-windriver.2011-05-28.zip)
+* **Windows 8.1 to 10.x** : [USBasp-win-driver-x86-x64-v3.0.7.zip](https://github.com/hidnseek/hidnseek/blob/master/Drivers/USBasp-win-driver-x86-x64-v3.0.7.zip)
 
 The USBASP windows driver was previously based on libusb-win32. The certificate on the base drivers have expired and the library has now been superseded by libusbK. You can now download the new version from the location below.
 
@@ -60,6 +60,6 @@ To upload your arduino sketches to the HidnSeek, ensure that you have the correc
 
 In order to actually upload the code to the arduino, the device must be placed into DFU mode (Direct Firmware Update). There are two methods to prepare HidnSeek for DFU mode.
 
-1. You can put the device in DFU mode by using the series of accelerometer that is specified in the HidnSeek's [manual](devkits/hidnseek/library/manual.pdf).
+1. You can put the device in DFU mode by using the series of accelerometer that is specified in the HidnSeek's [manual](https://github.com/hidnseek/hidnseek/blob/master/docs/Manual_en_A.pdf).
 
 2. **Create a short circuit between R & G pins**. *Be aware you will lose anything stored in the EEPROM*. Once you have done this, you can plug a USB cable into you computer and the HidnSeek board. You will then see between 30 and 60 red flashes of device's LED to notify you that you are in DFU mode. Click on the upload button within the Arduino IDE. Uploading a sketch should take less than 4 seconds. Ignore the warnings about the clk speed. Your sketch will start after the booting up period (0-30 seconds).
