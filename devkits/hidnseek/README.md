@@ -50,6 +50,10 @@ The USBASP windows driver was previously based on libusb-win32. The certificate 
 
 This driver should work with any version of Windows XP right through to 8.1 and 10 (both 32 and 64 bit editions). As the driver is signed, there should be no need to disable driver certificate enforcement.
 
+#### Installing the Required libraries
+
+In order to use all of the included sensors (including Sigfox!), you will need to **install the required libraries**. To do this, navigate to the [Library](../devkits/hidnseek/library) folder. Here you will find a .zip file called 'hidnseek.zip'. Install this from your Arduino IDE (*Sketch->Include Library->Add .zip Library*) and include required library with your .ino sketch. If required, you can access the uncompressed versions of the library from here as well.
+
 #### Flashing the HidnSeek (DFU Mode)
 
 To upload your arduino sketches to the HidnSeek, ensure that you have the correct board selected in the **Board Manager** and that you are using the **USBasp** programmer.
