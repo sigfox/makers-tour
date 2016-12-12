@@ -1,5 +1,5 @@
-/* This file started from Akeru library http://akeru.cc copyleft Snootlab, 2014
- and has been modified for HidnSeek by Stephane D, 2014.
+/* This file started from Akeru library http://akeru.cc copyleft Snootlab, 2014,
+ modified for HidnSeek by Stephane D, 2014 and further adapted by SIGFOX - Alex B in 2016.
 
  This library is free software: you can redistribute it and/or
  modify it under the terms of the GNU General Public License as published
@@ -11,8 +11,8 @@
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
 
- You should have received a copy of the GNU General Public License along
- with HidnSeek.  If not, see <http://www.gnu.org/licenses/>.*/
+ You should have received a copy of the GNU General Public License.
+ If not, see <http://www.gnu.org/licenses/>.*/
 
 #ifndef HIDNSEEK_H
 #define HIDNSEEK_H
@@ -24,7 +24,8 @@
 #include "Barometer.h"
 #include "EEPROM.h"
 #include "MMA8653.h"
-/****************** ATMega328p pin values *******************************/
+
+/****************** ATMega328p Pin Config *******************************/
 
 #define rxGPS            0     // PD0 RX Serial from GPS
 #define txGPS            1     // PD1 TX Serial to GPS
@@ -54,11 +55,11 @@
 #define redLEDon   PORTD |= (1 << redLEDpin)
 #define redLEDoff  PORTD &= ~(1 << redLEDpin)
 
-/****************** Pins output values *******************************/
+/****************** Pins Output Values *******************************/
 
 #define DIGITAL_PULLUP ((1 << shdPin) | (1 << accINT) | (1 << usbDP) | (1 << usbDM))
 
-/****************** Pins direction ***********************************/
+/****************** Pins Direction ***********************************/
 
 #define DDRC_MASK (1 << 2)
 #define DIGITAL_OUTPUT ((1 << shdPin) | (1 << redLEDpin) | (1 << bluLEDpin) | (1 << rxSigfox) | (1 << rstPin))
@@ -73,7 +74,7 @@
 #define PMTK_ENABLE_SBAS "$PMTK313,1*" // 2E"
 #define PMTK_ENABLE_WAAS "$PMTK301,2*" // 2E"
 
-/****************** Accelerometer *******************************/
+/****************** Accelerometer Config *******************************/
 
 #define ACCEL_MODE 2        // 2G scale for the accelerometer
 #define ACCEL_TRIG 40
@@ -83,7 +84,7 @@
 #define MOTION_MIN_NUMBER 2
 #define PERIOD_COUNT ((PERIOD_LOOP * 15) >> 1)
 
-/****************** Battery *******************************/
+/****************** Battery Config *******************************/
 
 #define BATT_MIN 3570
 #define BATT_MAX 4200
@@ -96,7 +97,7 @@
 #define ADDR_CAL_LOW  32 // byte32-33: battery calibration
 #define ADDR_CAL_HIGH 33
 
-/****************** Barometer *******************************/
+/****************** Barometer Config *******************************/
 
 #define ALTITUDE 252.0 // Altitude of HidnSeek's HQ in Grenoble in meters
 
@@ -117,13 +118,15 @@ typedef enum {
     OK = 'O',
     KO = 'K',
     SENT = 'S'
-} RETURN_CODE;
+} return_code;
 
+// GPS Variables
 extern boolean GPSactive;
 extern int year;
 extern byte month, day, hour, minute, second, hundredths;
 extern uint16_t alt, spd;
 extern uint8_t  sat, syncSat, noSat;
+extern uint8_t loopGPS;
 extern unsigned long fix_age;
 
 struct Payload {
@@ -134,13 +137,17 @@ struct Payload {
 
 extern struct Payload p;
 
+// SPORTS Mode Variables
+
 extern uint8_t forceSport;
 extern uint8_t limitSport;
 
-extern uint8_t loopGPS;
+// Barometer Variables
 
 extern float    Temp;
 extern uint16_t Press;
+
+// Accelerometer Variables
 
 extern boolean accelPresent;
 extern boolean baromPresent;
@@ -156,13 +163,14 @@ extern unsigned long start;
 
 extern uint16_t batteryValue;
 
-extern byte     accelPosition;
+extern byte accelPosition;
 
 extern uint8_t  today;
 extern uint8_t  MsgCount;
 
-void serialString (PGM_P s);
+// Global Functions
 
+void serialString (PGM_P s);
 
 /*********************************************************************/
 
@@ -171,20 +179,18 @@ class HidnSeek {
         HidnSeek(uint8_t rxPin, uint8_t txPin);
         ~HidnSeek();
         int begin();
-		      int test();
         void initGPIO();
         /* Power Management Fuctions */
         bool setPower(uint8_t power);
         void setSupply(boolean shd);
         void changeCurrent500mA(boolean current);
-        void checkBattery();
+        void checkVoltage();
         /* ATMega328p Fuctions */
         int freeRam();
         void serialString(PGM_P s);
         void flashRed(int num);
+		    void flashBlu(int num);
         void NoflashRed();
-        /* HidnSeek Modes */
-
         /* SIGFOX Functions */
         bool send(const void* data, uint8_t len);
         bool isReady();
@@ -192,7 +198,7 @@ class HidnSeek {
         uint8_t getRev();
         bool initSigFox();
         void sendSigFox(byte msgType);
-        /* GPS Functions */
+		void sendMessage(const char* input);
         /* Accelerometer Functions */
         bool initMems();
         bool accelStatus();
@@ -216,38 +222,27 @@ class HidnSeek {
         uint8_t _rxPin;
         uint8_t _txPin;
         uint8_t loopGPS = 0;
-
         /* Battery */
         unsigned int sensorMax;
-
-
         void stepMsg();
-
         uint8_t _nextReturn();
         void _command(PGM_P s);
-
-
-        // BMP180 measurements
-
 };
 
 class GPS {
     public:
         GPS();
-        bool initGPS();
-        void gpsCmd(PGM_P s);
-        void gpsStandby();
-        bool gpsProcess();
+        bool init();
+        void cmd(PGM_P s);
+        void standby();
+        bool process();
         void makePayload();
         void decodPayload();
-
     private:
-        TinyGPS gps;
-        MMA8653 accel;
-        Barometer bmp180;
+        TinyGPS gps; // ARE THESE NEEDED?
+        MMA8653 accel; // ARE THESE NEEDED?
+        Barometer bmp180; // ARE THESE NEEDED?
         void printDate();
         void printData(bool complete);
-
 };
-
 #endif

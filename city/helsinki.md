@@ -6,14 +6,14 @@ Tervetuloa! Here you'll find information about the Sigfox tour in Helsinki. We'l
 
 ### Presentation
 
-You can find the Makers Tour presentation [here](presentation/2016). This covers everything we've spoken about, examples of sigfox use cases and gives you the chance to follow along with what we're talking about!
+You can find the Makers Tour presentation [here](../presentation/2016). This covers everything we've spoken about, examples of sigfox use cases and gives you the chance to follow along with what we're talking about!
 
 ### Development Kits
 
 The Development Kit we are using for this event is the [Hidnseek](https://www.hidnseek.fr/). You can find out more by visiting their website or checking out the libraries/board details below.
 
-* [Setup](devkits/hidnseek)
-* [Library](devkits/hidnseek)
+* [Setup](../devkits/hidnseek)
+* [Library](../devkits/hidnseek)
 * [GitHub](https://github.com/hidnseek)
 
 ### Getting Started
@@ -32,9 +32,9 @@ Congratulations! You're all ready to go! Now lets get you sending your first mes
 
 #### Sending Your First Message
 
-To send your first message you'll need to make sure you've set up the correct development enviroment for the device that you are using. In this case make sure you've visited the [setup](devkits/hidnseek) instructions for the HidnSeek.
+To send your first message you'll need to make sure you've set up the correct development enviroment for the device that you are using. In this case make sure you've visited the [setup](../devkits/hidnseek) instructions for the HidnSeek.
 
-After you've done this, you'll be able to send your first Sigfox message using the code example ['Helloworld'](devkits/hidnseek). Once you've managed to get this working, feel free to try out one of the other examples, generate your own code or try to grab some sensor data from the device.
+After you've done this, you'll be able to send your first Sigfox message using the code example ['Helloworld'](../devkits/hidnseek). Once you've managed to get this working, feel free to try out one of the other examples, generate your own code or try to grab some sensor data from the device.
 
 ### Challenge
 
