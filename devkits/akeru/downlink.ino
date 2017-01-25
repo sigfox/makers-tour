@@ -8,7 +8,7 @@ void setup() {
   
   delay(300);
   
-  sigfox.write("AT$SF=09AF0000CAFE,1\r");
+  sigfox.write("AT$SF=09AF0000CAFE,2,1\r");
   
 
 }
