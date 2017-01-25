@@ -11,8 +11,8 @@ If you build a cool project with anything you've learnt from the event, please s
 
 ### Find your city
 #### 2017
-* [Copenhagen](/city/copenhagen)
+* [Copenhagen](./city/copenhagen.md)
 
 #### 2016
-* [Helsinki](/city/helsinki)
-* [Prague](/city/prague)
+* [Helsinki](./city/helsinki.md)
+* [Prague](./city/prague.md)
