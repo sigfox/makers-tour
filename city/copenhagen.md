@@ -7,7 +7,7 @@ We'll help you get started with understanding how Sigfox works, get your Dev Kit
 
 ### Presentation
 
-You can find the Makers Tour presentation [here](../presentation/2017). This covers everything we've spoken about, examples of sigfox use cases and gives you the chance to follow along with what we're talking about!
+You can find the Makers Tour presentation [here](http://www.slideshare.net/nicolsc-slides/sigfox-makers-tour-copenhagen). This covers everything we've spoken about, examples of sigfox use cases and gives you the chance to follow along with what we're talking about!
 
 ### Development Kits
 
