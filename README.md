@@ -11,6 +11,8 @@ If you build a cool project with anything you've learnt from the event, please s
 
 ### Find your city
 #### 2017
+* [São Paulo](./city/saopaulo.md)
+* [Mexico City](./city/mexicocity.md)
 * [Copenhagen](./city/copenhagen.md)
 
 #### 2016
