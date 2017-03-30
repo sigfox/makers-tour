@@ -1,4 +1,4 @@
-<p align="center"><img src ="http://www.sigfox.com/themes/custom/sigfox/images/logo-2016.svg" width="300"></p>
+<p align="center"><img src ="./sigfox.png" width="300"></p>
 
 # Sigfox Makers Tour
 Welcome to the Sigfox Makers Tour! If this is your first makers tour, you'll be excited to know that we post all of our resources for each event in this repository. You'll be able to easily find the slides for our workshop, libraries and getting started guides for the dev kits we bring along and even some challenges for you to complete!
