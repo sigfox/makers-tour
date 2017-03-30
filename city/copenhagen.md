@@ -36,7 +36,37 @@ Congratulations! You're all ready to go! Now let's get you sending your first me
 
 #### Sending Your First Message
 
-(To be completed)
+Sample codes are available [here](https://github.com/sigfox/makers-tour/tree/master/devkits/akeru)
+
+Here is the basic "Hello World" sample, which is fact sending `1`, using the `AT$SB` command
+
+```
+#include <SoftwareSerial.h>
+//The TD1208 is hardwired to pins 5 & 4
+SoftwareSerial sigfox(5,4);
+void setup() {
+  //Setup serial communications
+  Serial.begin(9600);
+  sigfox.begin(9600);
+  
+  delay(300);
+  
+  //Send a Single Bit over the Sigfox Network
+  sigfox.write("AT$SB=1\r");
+  
+
+}
+
+void loop() {
+  //Debug: Forward  module output to serial monitor
+  while (sigfox.available()){
+    Serial.write(sigfox.read());
+  }
+  
+}
+```
+
+
 
 ### Additional Resources
 
