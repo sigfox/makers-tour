@@ -26,7 +26,7 @@ void setup() {
   // AT$SB : send single bit (AT$SB=0|1)
   // AT$SF : send frame AT$SF=A012 (hex, up to 12bytes)
   // AT$SF=1234,2,1 : send 0x12 0x34 and request downlink response
-  sigfox.write("AT$SB=1\r");
+  sigfox.write("AT$SF=12ABCAFE,2,1\r");
 
 
 }  
@@ -54,7 +54,7 @@ void flashLED(int color, int num){
         delay(50);
         turnLEDOff(color);
         if (--num)
-            delay(50);
+        delay(50);
     }
 }
 
