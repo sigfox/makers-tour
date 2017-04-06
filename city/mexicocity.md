@@ -14,6 +14,9 @@ You'll find the presentation slides on [Slideshare](https://www.slideshare.net/n
 The Development Kit we are using for this event is the [Thinxtra Xkit](//www.thinxtra.com/xkit/).
 This kit is an [Arduino](//arduino.cc) shield with a Sigfox-ready [Wisol](https://partners.sigfox.com/products/wssfm10r2) module
 
+### Workshop slides
+
+Available on [Slideshare](https://www.slideshare.net/nicolsc-slides/sigfox-xkit-workshop)
 
 ### Getting Started
 
