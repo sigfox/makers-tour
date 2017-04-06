@@ -7,7 +7,7 @@ We'll help you get started with understanding how Sigfox works, get your Dev Kit
 
 ### Presentation
 
-_Coming Soon ☺_
+You'll find the presentation slides on [Slideshare](https://www.slideshare.net/nicolsc-slides/sigfox-makers-tour-mexico-city)
 
 ### Development Kits
 
@@ -36,6 +36,7 @@ Sample codes are available [here](https://github.com/Thinxtra/Xkit-Sample)
 ### Additional Resources
 
 * [Sigfox Developer Portal](https://makers.sigfox.com)
+* [Thinxtra Xkit](http://thinxtra.com/xkit)
 * [Sigfox Q&A](//ask.sigfox.com)
 * [Sigfox Github](//github.com/sigfox)
-* [Hackster.io](https://hackster.io/sigfox)
+* [Hackster.io](https://hackster.io/sigfox)``
