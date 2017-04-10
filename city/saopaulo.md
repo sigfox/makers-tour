@@ -5,9 +5,12 @@
 Here you'll find information about the Sigfox Makers Tour in São Paulo.  
 We'll help you get started with understanding how Sigfox works, get your Dev Kits setup and provide you with the ideas to get started building your own projects.
 
-### Presentation
+### Slides & support material
 
-The slides of the presentation are available on [slideshare](https://www.slideshare.net/nicolsc-slides/sigfox-makers-tour-so-paulo)
+
+
+* [Sigfox presentation](https://www.slideshare.net/nicolsc-slides/sigfox-makers-tour-so-paulo)
+* [XKit Workshop](https://www.slideshare.net/nicolsc-slides/sigfox-xkit-workshop)
 
 ### Development Kits
 
