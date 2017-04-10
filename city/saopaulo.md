@@ -1,4 +1,4 @@
-<p align="center"><img src ="./sigfox.png" width="300"></p>
+<p align="center"><img src ="../sigfox.png" width="300"></p>
 
 # Sigfox Makers Tour São Paulo
 
@@ -7,7 +7,7 @@ We'll help you get started with understanding how Sigfox works, get your Dev Kit
 
 ### Presentation
 
-_Coming Soon ☺_
+The slides of the presentation are available on [slideshare](https://www.slideshare.net/nicolsc-slides/sigfox-makers-tour-so-paulo)
 
 ### Development Kits
 
@@ -30,7 +30,12 @@ Congratulations! You're all ready to go! Now let's get you sending your first me
 
 #### Sending Your First Message
 
-Sample codes are available [here](https://github.com/Thinxtra/Xkit-Sample)
+Check this [Hello World](https://github.com/sigfox/makers-tour/blob/master/devkits/xkit/hello-world.ino) very basic Arduino sample
+
+
+#### Demo Application
+You will find a few demo application [here](https://github.com/aureleq/Xkit-Sample) .
+
 
 
 ### Additional Resources
@@ -38,4 +43,3 @@ Sample codes are available [here](https://github.com/Thinxtra/Xkit-Sample)
 * [Sigfox Developer Portal](https://makers.sigfox.com)
 * [Sigfox Q&A](//ask.sigfox.com)
 * [Sigfox Github](//github.com/sigfox)
-* [Hackster.io](https://hackster.io/sigfox)
